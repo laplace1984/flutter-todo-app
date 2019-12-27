@@ -19,6 +19,8 @@ class ToDoBloc {
     _valueController.sink.add(_todoList);
   }
 
+  void changeToDo(int index, ToDo value) {
+    _todoList[index] = value;
     _valueController.sink.add(_todoList);
   }
 
