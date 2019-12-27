@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import 'package:todo_app/blocs/todo_bloc.dart';
@@ -31,7 +32,8 @@ class ToDoListView extends StatelessWidget {
   Widget _buildRow(int index, ToDo value, ToDoBloc bloc) {
     return CheckboxListTile(
         title: Text(value.description),
-        subtitle: Text(value.createAt.toString()),
+        subtitle:
+            Text(DateFormat.yMMMMEEEEd().add_jms().format(value.createAt)),
         value: value.completed,
         onChanged: (bool checked) {
           // update completed flag

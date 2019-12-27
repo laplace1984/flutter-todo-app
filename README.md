@@ -19,3 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 - flutter
 - flutter material
 - provider (& Business Logic Component)
+- intl (internationalization)
