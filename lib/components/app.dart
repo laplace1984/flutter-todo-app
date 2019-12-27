@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:todo_app/components/pages/todo_edit.dart';
 import 'package:todo_app/components/pages/todo_list.dart';
 
 class App extends StatelessWidget {
@@ -9,6 +11,7 @@ class App extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => ToDoList(),
+        'edit': (context) => ToDoEdit(),
       },
     );
   }

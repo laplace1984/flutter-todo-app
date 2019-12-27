@@ -22,9 +22,12 @@ class ToDoList extends StatelessWidget {
 
   Widget _floatingButton() {
     return Consumer<ToDoBloc>(
-      builder: (_, bloc, __) {
+      builder: (context, bloc, __) {
         return FloatingActionButton(
-          onPressed: bloc.addToDo,
+          // onPressed: bloc.addToDo,
+          onPressed: () {
+            Navigator.pushNamed(context, 'edit');
+          },
           child: const Icon(Icons.add),
         );
       },
