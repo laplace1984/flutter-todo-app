@@ -14,12 +14,10 @@ class ToDoBloc {
     _valueController.sink.add(_todoList);
   }
 
-  void addToDo() {
-    _todoList.add(ToDo(
-        id: _todoList.length + 1,
-        description: "test ${_todoList.length + 1}",
-        createAt: DateTime.now(),
-        completed: false));
+  void addToDo(ToDo value) {
+    _todoList.add(value);
+    _valueController.sink.add(_todoList);
+  }
 
     _valueController.sink.add(_todoList);
   }

@@ -24,9 +24,15 @@ class ToDoList extends StatelessWidget {
     return Consumer<ToDoBloc>(
       builder: (context, bloc, __) {
         return FloatingActionButton(
-          // onPressed: bloc.addToDo,
           onPressed: () {
-            Navigator.pushNamed(context, 'edit');
+            bloc.addToDo(ToDo(
+                id: 1,
+                description: "test",
+                createAt: DateTime.now(),
+                completed: false));
+
+            // for navigate edit screen
+            // Navigator.pushNamed(context, 'edit');
           },
           child: const Icon(Icons.add),
         );
